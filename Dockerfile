@@ -10,14 +10,14 @@ RUN git clone --recursive https://github.com/ceph/ceph
 WORKDIR /src/ceph
 RUN ./install-deps.sh
 
-RUN git checkout -b v10.0.4 v10.0.4 
+RUN git checkout -b v10.0.5 v10.0.5 
 
 # RUN ./autogen.sh
 # RUN ./configure
 # RUN make 
 # RUN make install
 
-COPY changelog /src/ceph/debian/
+# COPY changelog /src/ceph/debian/
 RUN dpkg-buildpackage
 
 
