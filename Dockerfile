@@ -18,6 +18,6 @@ RUN git checkout -b v10.0.5 v10.0.5
 # RUN make install
 
 # COPY changelog /src/ceph/debian/
-RUN dpkg-buildpackage
+RUN dpkg-buildpackage -b
 
 
